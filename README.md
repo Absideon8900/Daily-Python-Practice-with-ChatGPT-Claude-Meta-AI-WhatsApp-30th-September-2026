@@ -15,14 +15,53 @@ For every volcano calculate:<br>
 </ul>
 <b>Step 2</b><br>
 A Volcano is <b>"High Alert"</b> if:<br>
-```Average Ash >= 60
+
+```
+Average Ash >= 60
 AND
 Average Gas >= 85 
 ```
-<br>Otherwise <b>"Normal"</b><br>
+Otherwise <b>"Normal"</b><br>
+
 <b>Step 3</b><br>
+For High Alert volcanoes only:<br>
+Store:<br>
+```python
+{
+      "Average Ash":...,
+      "Average Gas":...,
+      "Status":"High Alert"
+}
+```
 <b>Step 4</b><br>
+While looping through High Alert volcanoes keep track of:<br>
+<ul>
+  <li>Total Average Ash</li>
+  <li>Number of High Alert Volcanoes</li>
+  <li>Volcanoes with highest average ash</li>
+  <li>Volcanoes with lowest average ash</li>
+</ul></br>
+
 <b>Step 5</b><br>
+After the loop calculate:<br>
+<ul>
+  <li>Overall average ash of High Alert Volcanoes</li>
+</ul></br>
+
+```python
+{
+    "report": report,
+    "statistics": {
+        "High Alert Volcanoes": ...,
+        "Overall Average Ash": ...,
+        "Highest Ash Volcano": ...,
+        "Highest Ash Average": ...,
+        "Lowest Ash Volcano": ...,
+        "Lowest Ash Average": ...
+    }
+}
+```
+# Solution
 
 ```python
 volcanoes = {
